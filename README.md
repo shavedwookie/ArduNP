@@ -6,7 +6,7 @@ sudo apt-get upgrade
 sudo apt-get install git
 sudo apt-get install gitk git-gui
 git clone --recurse-submodules https://github.com/shavedwookie/ArduNP
-cd ardupilot
+cd ArduNP
 Tools/environment_install/install-prereqs-ubuntu.sh -y
 . ~/.profile
 ```
