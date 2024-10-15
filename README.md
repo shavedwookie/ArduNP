@@ -1,7 +1,7 @@
 # ArduPilot Project
 
 ```
-sim_vehicle.py --mavproxy-args="--out=tcp:GCSIP:5760 --out=tcp:GCSIP2:5761"
+sim_vehicle.py --mavproxy-args="--out=udp:GCSIP:14550 --out=udp:GCSIP2:14551"
 ```
 
 
