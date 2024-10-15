@@ -1,8 +1,8 @@
 # ArduPilot Project
 
-**
-sim_vehicle.py --mavproxy-args="--out=tcp:GCSIP:5760 --out=tcp:GCSIP:5761"
-**
+```
+sim_vehicle.py --mavproxy-args="--out=tcp:GCSIP:5760 --out=tcp:GCSIP2:5761"
+```
 
 
 <a href="https://ardupilot.org/discord"><img src="https://img.shields.io/discord/674039678562861068.svg" alt="Discord">
