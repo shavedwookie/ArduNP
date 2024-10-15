@@ -1,7 +1,7 @@
 # ArduPilot Project
 
 ```
-sim_vehicle.py -f quadplane --mavproxy-args="--out=udp:GCSIP:14550 --out=udp:GCSIP2:14551"
+sim_vehicle.py -f quadplane -L KRDR --mavproxy-args="--out=udp:GCSIP:14550 --out=udp:GCSIP2:14551"
 ```
 
 
