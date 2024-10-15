@@ -1,5 +1,17 @@
 # ArduPilot Project
+to build ardupilot
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install git
+sudo apt-get install gitk git-gui
+git clone --recurse-submodules https://github.com/shavedwookie/ArduNP
+cd ardupilot
+Tools/environment_install/install-prereqs-ubuntu.sh -y
+. ~/.profile
+```
 
+to run the sim
 ```
 sim_vehicle.py -f quadplane -L KRDR --mavproxy-args="--out=udp:GCSIP:14550 --out=udp:GCSIP2:14551"
 ```
