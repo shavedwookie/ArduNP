@@ -51,9 +51,9 @@ enum class TopicIndex: uint8_t {
 #if AP_DDS_JOY_SUB_ENABLED
     JOY_SUB,
 #endif // AP_DDS_JOY_SUB_ENABLED
-#if AP_DDS_DYNAMIC_TF_SUB
+#if AP_DDS_DYNAMIC_TF_SUB_ENABLED
     DYNAMIC_TRANSFORMS_SUB,
-#endif // AP_DDS_DYNAMIC_TF_SUB
+#endif // AP_DDS_DYNAMIC_TF_SUB_ENABLED
 #if AP_DDS_VEL_CTRL_ENABLED
     VELOCITY_CONTROL_SUB,
 #endif // AP_DDS_VEL_CTRL_ENABLED
@@ -96,7 +96,7 @@ constexpr struct AP_DDS_Client::Topic_table AP_DDS_Client::topics[] = {
         .dw_id = uxrObjectId{.id=to_underlying(TopicIndex::NAV_SAT_FIX_PUB), .type=UXR_DATAWRITER_ID},
         .dr_id = uxrObjectId{.id=to_underlying(TopicIndex::NAV_SAT_FIX_PUB), .type=UXR_DATAREADER_ID},
         .topic_rw = Topic_rw::DataWriter,
-        .topic_name = "rt/ap/navsat/navsat0",
+        .topic_name = "rt/ap/navsat",
         .type_name = "sensor_msgs::msg::dds_::NavSatFix_",
         .qos = {
             .durability = UXR_DURABILITY_VOLATILE,
@@ -286,7 +286,7 @@ constexpr struct AP_DDS_Client::Topic_table AP_DDS_Client::topics[] = {
         },
     },
 #endif // AP_DDS_JOY_SUB_ENABLED
-#if AP_DDS_DYNAMIC_TF_SUB
+#if AP_DDS_DYNAMIC_TF_SUB_ENABLED
     {
         .topic_id = to_underlying(TopicIndex::DYNAMIC_TRANSFORMS_SUB),
         .pub_id = to_underlying(TopicIndex::DYNAMIC_TRANSFORMS_SUB),
@@ -303,7 +303,7 @@ constexpr struct AP_DDS_Client::Topic_table AP_DDS_Client::topics[] = {
             .depth = 5,
         },
     },
-#endif // AP_DDS_DYNAMIC_TF_SUB
+#endif // AP_DDS_DYNAMIC_TF_SUB_ENABLED
 #if AP_DDS_VEL_CTRL_ENABLED
     {
         .topic_id = to_underlying(TopicIndex::VELOCITY_CONTROL_SUB),
